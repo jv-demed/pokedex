@@ -6,14 +6,22 @@ const HomeStyled = styled.section`
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding: 20px 50px;
     .count{
+        font-size: 20pt;
         margin-bottom: 20px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
     }
 `
 
 export default function Home(){
     
-    const pokeList = getData('https://pokeapi.co/api/v2/pokemon', {
+    const pokeList = getData('https://pokeapi.co/api/v2/pokemon?limit=1126', {
         count: 0,
         results: []
     });

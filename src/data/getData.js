@@ -11,6 +11,6 @@ export default function getData(url, obj){
             setData(complete);
         })
     }, []);
-
+    
     return data;
 }
