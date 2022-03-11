@@ -6,6 +6,9 @@ const Globals = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+    body{
+        padding: 20px 60px;
+    }
     ul{
         list-style: none;
     }
