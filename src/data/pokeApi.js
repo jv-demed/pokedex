@@ -4,6 +4,13 @@ const pokeApi = {
         results: []
     },
     pokeObj: {
+        types: {
+            type: {
+                type: {
+                    name: ''
+                }
+            }
+        },
         sprites: {
             other: {
                 'official-artwork': {
