@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 const PokeBoxStyled = styled.div`
     align-items: center;
-    background-color: ${({ theme }) => theme.bgPokeBox};
+    background-color: ${({ theme }) => theme.bgs.pokeBox};
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     height: 200px;
-    justify-content: space-between;
-    padding: 5px 10px;
+    justify-content: ${props => props.justifyContent ? 'center' : 'space-between'};
+    padding: 5px 10px 7px;
     width: 200px;
     .nameArea{
         align-items: center;
@@ -17,7 +17,7 @@ const PokeBoxStyled = styled.div`
         justify-content: space-between;
         width: 100%;
         .number{
-            color: ${({ theme }) => theme.pokeId};
+            color: ${({ theme }) => theme.fonts.pokeId};
             font-size: 10pt;
         }
     }
@@ -29,7 +29,14 @@ const PokeBoxStyled = styled.div`
         gap: 5px;
     }
     :hover{
-        background-color: ${({ theme }) => theme.bgPokeBoxHover};
+        background-color: ${({ theme }) => theme.bgs.pokeBoxHover};
+    }
+    @media(max-width: 850px){
+        height: 150px;
+        width: 150px;
+        img{
+            width: 75px;
+        }
     }
 `
 

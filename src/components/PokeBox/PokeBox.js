@@ -14,7 +14,7 @@ export default function PokeBox(props){
     
     if(!sprite){
         return(
-            <PokeBoxStyled>
+            <PokeBoxStyled justifyContent={'center'}>
                 <Loading size='50px' />
             </PokeBoxStyled>
         )

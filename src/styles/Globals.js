@@ -12,6 +12,9 @@ const Globals = createGlobalStyle`
     ul{
         list-style: none;
     }
+    @media(max-width: 850px){
+        padding: 10px;
+    }
 `
 
 export default Globals;

@@ -1,5 +1,5 @@
 const pokeApi = {
-    pokeList: 'https://pokeapi.co/api/v2/pokemon?limit=151',
+    pokeList: 'https://pokeapi.co/api/v2/pokemon?limit=493',
     pokeListObj: {
         results: []
     },
