@@ -4,6 +4,7 @@ const SearchBarStyled = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    border: 1px solid red;
     div{
         background-color: ${({ theme }) => theme.bgs.pokeBox};
         border-radius: 5px;
@@ -36,7 +37,7 @@ const SearchBarStyled = styled.div`
             }
         }
     }
-    @media(max-width: 600px){
+    @media(max-width: 550px){
         div{
             width: 100%;
         }

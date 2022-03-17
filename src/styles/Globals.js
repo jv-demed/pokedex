@@ -13,7 +13,9 @@ const Globals = createGlobalStyle`
         list-style: none;
     }
     @media(max-width: 850px){
-        padding: 10px;
+        body{
+            padding: 20px;
+        }
     }
 `
 
