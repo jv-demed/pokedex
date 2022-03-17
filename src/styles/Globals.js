@@ -7,7 +7,7 @@ const Globals = createGlobalStyle`
         padding: 0;
     }
     body{
-        padding: 20px 60px;
+        padding: 20px 80px;
     }
     ul{
         list-style: none;

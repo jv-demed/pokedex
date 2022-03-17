@@ -14,7 +14,7 @@ export default function PokeBox(props){
     
     if(!sprite){
         return(
-            <PokeBoxStyled justifyContent={'center'}>
+            <PokeBoxStyled justifyContent='center'>
                 <Loading size='50px' />
             </PokeBoxStyled>
         )
@@ -28,7 +28,7 @@ export default function PokeBox(props){
             <img src={sprite} />
             <div className='types'>
                 {poke.types.map((type, i) => {
-                    const typeName = firstUpperCase(type.type.name)
+                    const typeName = firstUpperCase(type.type.name);
                     return(
                         <TypeBox key={name+'Type'+(i+1)} typeName={typeName} />
                     )

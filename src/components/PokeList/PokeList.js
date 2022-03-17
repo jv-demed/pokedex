@@ -3,18 +3,20 @@ import PokeListStyled from './PokeListStyled';
 import PokeBox from '../PokeBox/PokeBox';
 import { pokeApi } from '../../data/pokeApi';
 
-export default function PokeList(){
+export default function PokeList({ alphaFilter }){
 
-    const pokeList = getData(pokeApi.pokeList, pokeApi.pokeListObj);
+    const pokeList = getData(pokeApi.pokeList, pokeApi.pokeListObj).results;
 
     return(
         <PokeListStyled>
-            {pokeList.results.map((poke, i) => {
-                return(
-                    <li key={i+1}>
-                        <PokeBox poke={poke} />
-                    </li>
-                )
+            {pokeList.map((poke, i) => {
+                if(poke.name.includes(alphaFilter.toLowerCase())){
+                    return(
+                        <li key={i+1}>
+                            <PokeBox poke={poke} />
+                        </li>
+                    )
+                }
             })}
         </PokeListStyled>
     )

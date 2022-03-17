@@ -7,7 +7,7 @@ export default function TypeBox(props){
     const color = typeBoxBg(type);
 
     return(
-        <TypeBoxStyled className='fontAlternative' color={color} flag={typeBoxColor(type)}>
+        <TypeBoxStyled className='fontAlternative' colorBg={color} flag={typeBoxColor(type)}>
             {type}
         </TypeBoxStyled>
     )

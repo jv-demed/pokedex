@@ -22,8 +22,10 @@ function typeBoxBg(type){
 }
 
 function typeBoxColor(type){
-    if(type == 'Bug' || type == 'Dark' || type == 'Dragon' || type == 'Fire' || type == 'Fighting' || type == 'Ghost' || type == 'Ground' 
-    || type == 'Poison' || type == 'Psychic' || type == 'Rock' || type == 'Water'){
+    if(type == 'Bug' || type == 'Dark' || type == 'Dragon' 
+    || type == 'Fire' || type == 'Fighting' || type == 'Ghost' 
+    || type == 'Ground' || type == 'Poison' || type == 'Psychic' 
+    || type == 'Rock' || type == 'Water'){
         return true
     }
 }

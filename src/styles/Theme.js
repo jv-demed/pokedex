@@ -1,4 +1,7 @@
 const Theme = {
+    basics: {
+        white: '#fff'
+    },
     bgs: {
         pokeBox: '#d8d8d8',
         pokeBoxHover: '#cdcdcd',

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const TypeBoxStyled = styled.div`
-    background-color: ${props => props.color};
+    background-color: ${props => props.colorBg};
     border-radius: 3px;
     color: ${props => props.flag ? 'white' : 'black'};
     font-size: 11px;
