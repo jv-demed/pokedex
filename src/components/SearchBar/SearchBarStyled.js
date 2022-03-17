@@ -4,7 +4,6 @@ const SearchBarStyled = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    border: 1px solid red;
     div{
         background-color: ${({ theme }) => theme.bgs.pokeBox};
         border-radius: 5px;
