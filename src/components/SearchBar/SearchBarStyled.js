@@ -27,6 +27,11 @@ const SearchBarStyled = styled.div`
         input:focus{
             outline: 0;
         }
+        @media(max-width: 850px){
+            input{
+                width: 100%;
+            }
+        }
     }
 `
 
