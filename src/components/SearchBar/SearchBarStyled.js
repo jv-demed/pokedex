@@ -22,15 +22,23 @@ const SearchBarStyled = styled.div`
             height: 40px;
             font-size: 18pt;
             padding: 0 5px;
-            width: 500px;
+            width: 550px;
         }
         input:focus{
             outline: 0;
         }
-        @media(max-width: 850px){
+    }
+    @media(max-width: 850px){
+        div{
+            width: 90%;
             input{
                 width: 100%;
             }
+        }
+    }
+    @media(max-width: 600px){
+        div{
+            width: 100%;
         }
     }
 `
