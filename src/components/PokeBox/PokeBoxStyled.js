@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const PokeBoxStyled = styled.div`
     align-items: center;
-    background-color: ${({ theme }) => theme.bgs.pokeBox};
+    background-color: ${({ theme }) => theme.basics.white};
     border-radius: 5px;
     display: flex;
     flex-direction: column;

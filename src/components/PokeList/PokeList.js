@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import getData from '../../data/getData';
 import PokeListStyled from './PokeListStyled';
 import PokeBox from '../PokeBox/PokeBox';
@@ -9,15 +10,18 @@ export default function PokeList({ alphaFilter }){
 
     return(
         <PokeListStyled>
-            {pokeList.map((poke, i) => {
-                if(poke.name.includes(alphaFilter.toLowerCase())){
-                    return(
-                        <li key={i+1}>
-                            <PokeBox poke={poke} />
-                        </li>
-                    )
-                }
-            })}
+            <span className='number'>Pokémons encontrados: {pokeList.length}</span>
+            <ul>
+                {pokeList.map((poke, i) => {
+                    if(poke.name.includes(alphaFilter.toLowerCase())){
+                        return(
+                            <li key={i+1}>
+                                <PokeBox poke={poke} />
+                            </li>
+                        )
+                    }
+                })}
+            </ul>
         </PokeListStyled>
     )
 }

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import Imgs from '../assets/Imgs';
 
 const Globals = createGlobalStyle`
     *{
@@ -7,6 +8,9 @@ const Globals = createGlobalStyle`
         padding: 0;
     }
     body{
+        background-attachment: fixed;
+        background-image: url(${Imgs.background});
+        background-size: cover;
         padding: 20px 80px;
     }
     ul{

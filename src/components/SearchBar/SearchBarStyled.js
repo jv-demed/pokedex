@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const SearchBarStyled = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-bottom: 20px;
     div{
-        background-color: ${({ theme }) => theme.bgs.pokeBox};
+        background-color: ${({ theme }) => theme.bgs.pokeList};
         border-radius: 5px;
         display: flex;
         height: 50px;

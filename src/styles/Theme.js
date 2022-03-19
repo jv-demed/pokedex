@@ -3,8 +3,9 @@ const Theme = {
         white: '#fff'
     },
     bgs: {
-        pokeBox: '#d8d8d8',
+        //pokeBox: '#d8d8d8',
         pokeBoxHover: '#cdcdcd',
+        pokeList: '#3e3e3e'
     },
     fonts: {
         pokeId: '#3c426c'
