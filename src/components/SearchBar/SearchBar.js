@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import SearchBarStyled from "./SearchBarStyled";
 import Imgs from '../../assets/Imgs';
 
