@@ -7,6 +7,7 @@ import { countPokeList } from '../../scripts/utils';
 export default function PokeList({ alphaFilter }){
 
     const pokeList = getData(pokeApi.pokeList, pokeApi.pokeListObj, this);
+    //console.log(pokeList)
 
     return(
         <PokeListStyled>

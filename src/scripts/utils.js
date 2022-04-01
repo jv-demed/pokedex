@@ -1,4 +1,5 @@
 function countPokeList(list, txt){
+    //console.log(list);
     return list.filter((poke) => poke.name.includes(txt.toLowerCase())).length;
 }
 

@@ -2,6 +2,7 @@ import SearchBarStyled from "./SearchBarStyled";
 import Imgs from '../../assets/Imgs';
 
 export default function SearchBar({ alphaFilter }){
+    //console.log(alphaFilter)
     return(
         <SearchBarStyled>
             <div>

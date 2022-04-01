@@ -13,6 +13,7 @@ export default function getData(url, obj, ts){
     }, [ts]);
 
     //console.log(data);
+    //console.log(data);
     
     return data;
 }
