@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function getData(url, obj){
+export default function getData(url, obj, ts){
 
     const [data, setData] = useState(obj);
 
@@ -10,7 +10,9 @@ export default function getData(url, obj){
         .then((complete) => {
             setData(complete);
         })
-    }, []);
+    }, [ts]);
+
+    //console.log(data);
     
     return data;
 }
