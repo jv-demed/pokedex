@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Loading = styled.div`
+export const Loading = styled.div`
     animation: rotate 0.4s linear infinite;
     border-top: 1px solid gray;
     border-right: 1px solid black;

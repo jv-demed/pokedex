@@ -1,4 +1,4 @@
-const pokeApi = {
+export const pokeApi = {
     pokeList: 'https://pokeapi.co/api/v2/pokemon?limit=151', /*493 */
     pokeListObj: {
         results: []
@@ -21,4 +21,4 @@ const pokeApi = {
     }
 }
 
-export { pokeApi };
+export default pokeApi;

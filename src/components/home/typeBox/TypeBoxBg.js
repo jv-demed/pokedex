@@ -1,4 +1,4 @@
-function typeBoxBg(type){
+export function typeBoxBg(type){
     switch(type){
         case 'Bug': return ({ theme }) => theme.types.bug;
         case 'Dark': return ({ theme }) => theme.types.dark;
@@ -21,7 +21,7 @@ function typeBoxBg(type){
     }
 }
 
-function typeBoxColor(type){
+export function typeBoxColor(type){
     if(type == 'Bug' || type == 'Dark' || type == 'Dragon' 
     || type == 'Fire' || type == 'Fighting' || type == 'Ghost' 
     || type == 'Ground' || type == 'Poison' || type == 'Psychic' 
@@ -29,5 +29,3 @@ function typeBoxColor(type){
         return true
     }
 }
-
-export { typeBoxBg, typeBoxColor };

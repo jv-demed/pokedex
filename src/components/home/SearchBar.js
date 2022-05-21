@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Imgs from '../../assets/Imgs';
 
 const SearchBarStyled = styled.div`
     display: flex;
@@ -43,4 +44,13 @@ const SearchBarStyled = styled.div`
     }
 `
 
-export default SearchBarStyled;
+export default function SearchBar({ alphaFilter }){
+    return(
+        <SearchBarStyled>
+            <div>
+                <img src={Imgs.pokeball} />
+                <input type='text' onChange={(event) => alphaFilter(event.target.value)}/>
+            </div>
+        </SearchBarStyled>
+    )
+}

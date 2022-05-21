@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import SearchBar from '../src/components/SearchBar/SearchBar';
-import PokeList from '../src/components/PokeList/PokeList';
+import SearchBar from '../src/components/home/SearchBar';
+import PokeList from '../src/components/home/PokeList';
 
 export default function Home(){
 
