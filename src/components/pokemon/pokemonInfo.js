@@ -1,8 +1,8 @@
+import{ useState } from 'react';
 import { useRouter } from "next/router";
 import styled from 'styled-components';
+import { pokeApi } from '../../data/pokeApi';
 import { getPokemon, getSpecie } from '../../data/getData';
-import pokeApi from '../../data/pokeApi';
-import Loading from '../globals/Loading';
 import { firstUpperCase } from '../../scripts/utils';
 
 const PokemonInfoStyled = styled.div`
@@ -24,16 +24,14 @@ const PokemonInfoStyled = styled.div`
     }
 `
 
-export default function PokemonInfo({ pokeName }){
+export default function PokemonInfo({ poke, specie }){
 
-    const poke = getPokemon(pokeName);
     const sprite = poke.sprites.other['official-artwork'].front_default;
-    const specie = getSpecie(pokeName);
     const desc = specie.flavor_text_entries[0].flavor_text;
 
     return(
         <PokemonInfoStyled>
-            <h1>{firstUpperCase(pokeName)}</h1>
+            <h1>{firstUpperCase(poke.name)}</h1>
             <div>
                 <img src={sprite} />
                 <span>{desc}</span>

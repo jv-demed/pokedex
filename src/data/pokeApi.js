@@ -19,9 +19,6 @@ export const pokeApi = {
                     front_default: ''
                 }
             }
-        },
-        species: {
-            url: ''
         }
     },
     specieObj: {

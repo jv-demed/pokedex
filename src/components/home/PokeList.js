@@ -37,7 +37,7 @@ export default function PokeList({ alphaFilter }){
                 {pokeList.results.map((poke, i) => {
                     if(poke.name.includes(alphaFilter.toLowerCase())){
                         return(
-                            <Link key={i+1} href={'/'+poke.name}>
+                            <Link key={i+1} href={'/pokemon/'+poke.name}>
                                 <li>
                                     <PokeBox pokeName={poke.name} />
                                 </li>
