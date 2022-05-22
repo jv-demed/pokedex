@@ -3,8 +3,7 @@ import PokemonInfo from '../src/components/pokemon/pokemonInfo';
 
 export default function Pokemon(){
 
-    localStorage.setItem('pokeName', useRouter().query.pokemon);
-    const name = localStorage.getItem('pokeName');
+    const name = useRouter().query.pokemon;
 
     return(
         <PokemonInfo pokeName={name} />
