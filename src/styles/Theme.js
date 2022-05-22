@@ -5,7 +5,7 @@ const Theme = {
     bgs: {
         //pokeBox: '#d8d8d8',
         pokeBoxHover: '#cdcdcd',
-        pokeList: '#3e3e3e'
+        pokeList: '#3e3e3eaa'
     },
     fonts: {
         pokeId: '#3c426c'

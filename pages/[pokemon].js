@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
+import PokemonInfo from '../src/components/pokemon/pokemonInfo';
 
 export default function Pokemon(){
 
-    const router = useRouter();
-    const param = router.query.pokemon;
+    localStorage.setItem('pokeName', useRouter().query.pokemon);
+    const name = localStorage.getItem('pokeName');
 
     return(
-        <h1>Pokédex: {param}</h1>
+        <PokemonInfo pokeName={name} />
     )
 }

@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import styled from 'styled-components';
-import getData from '../../data/getData';
-import pokeApi from '../../data/pokeApi';
+import { getPokeList } from '../../data/getData';
 import PokeBox from './PokeBox';
 import { countPokeList } from '../../scripts/utils';
 
@@ -9,7 +9,6 @@ const PokeListStyled = styled.div`
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    opacity: 0.85;
     padding: 10px;
     .number{
         color: ${({ theme }) => theme.basics.white};
@@ -27,7 +26,7 @@ const PokeListStyled = styled.div`
 
 export default function PokeList({ alphaFilter }){
 
-    const pokeList = getData(pokeApi.pokeList, pokeApi.pokeListObj);
+    let pokeList = getPokeList();
 
     return(
         <PokeListStyled>
@@ -38,9 +37,11 @@ export default function PokeList({ alphaFilter }){
                 {pokeList.results.map((poke, i) => {
                     if(poke.name.includes(alphaFilter.toLowerCase())){
                         return(
-                            <li key={i+1}>
-                                <PokeBox pokeInfo={poke} />
-                            </li>
+                            <Link key={i+1} href={'/'+poke.name}>
+                                <li>
+                                    <PokeBox pokeName={poke.name} />
+                                </li>
+                            </Link>
                         )
                     }
                 })}

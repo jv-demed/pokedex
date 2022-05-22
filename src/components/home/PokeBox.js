@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import getData from '../../data/getData';
+import { getPokemon } from '../../data/getData';
 import pokeApi from '../../data/pokeApi';
 import Loading from '../globals/Loading';
 import TypeBox from './typeBox/TypeBox';
 import { firstUpperCase } from '../../scripts/utils';
-import Link from 'next/link';
 
 const PokeBoxStyled = styled.div`
     align-items: center;
@@ -28,7 +27,7 @@ const PokeBoxStyled = styled.div`
         }
     }
     img{
-        width: 125px;
+        width: 135px;
     }
     .types{
         display: flex;
@@ -41,15 +40,15 @@ const PokeBoxStyled = styled.div`
         height: 150px;
         width: 150px;
         img{
-            width: 75px;
+            width: 88px;
         }
     }
 `
 
-export default function PokeBox({ pokeInfo }){
+export default function PokeBox({ pokeName }){
 
-    const poke = getData(pokeInfo.url, pokeApi.pokeObj);
-    const name = firstUpperCase(pokeInfo.name);
+    const poke = getPokemon(pokeName);
+    const name = firstUpperCase(pokeName);
     const sprite = poke.sprites.other['official-artwork'].front_default;
     const types = poke.types;
     
@@ -59,7 +58,6 @@ export default function PokeBox({ pokeInfo }){
             <Loading size='50px' />
         </PokeBoxStyled>
         :
-            <Link href={'/'+pokeInfo.name}>
         <PokeBoxStyled>
             <div className='nameArea'>
                 <span>{name}</span>
@@ -75,6 +73,5 @@ export default function PokeBox({ pokeInfo }){
                 })}
             </div>
         </PokeBoxStyled>
-            </Link>
     )
 }

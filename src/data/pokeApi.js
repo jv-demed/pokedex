@@ -1,9 +1,11 @@
 export const pokeApi = {
-    pokeList: 'https://pokeapi.co/api/v2/pokemon?limit=151', /*493 */
+    pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/',
+    specieUrl: 'https://pokeapi.co/api/v2/pokemon-species/',
     pokeListObj: {
         results: []
     },
-    pokeObj: {
+    pokemonObj: {
+        name: '',
         types: {
             type: {
                 type: {
@@ -17,7 +19,15 @@ export const pokeApi = {
                     front_default: ''
                 }
             }
+        },
+        species: {
+            url: ''
         }
+    },
+    specieObj: {
+        flavor_text_entries: [{
+            flavor_text: ''
+        }]
     }
 }
 
