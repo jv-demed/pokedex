@@ -23,7 +23,7 @@ function getData(url, obj){
 }
 
 export function getPokeList(){
-    return getData((pokeApi.pokemonUrl+'?limit=15'), pokeApi.pokeListObj);
+    return getData((pokeApi.pokemonUrl+'?limit=500'), pokeApi.pokeListObj);
 }
 
 export function getPokemon(name){

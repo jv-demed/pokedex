@@ -1,46 +1,36 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { getPokeList } from '../../data/getData';
 import PokeBox from './PokeBox';
-import { countPokeList } from '../../scripts/utils';
+import PokeBoxMobile from '../../mobile/PokeBoxMobile';
 
 const PokeListStyled = styled.div`
     background-color: ${({ theme }) => theme.bgs.pokeList};
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+    margin-top: 90px;
     padding: 10px;
-    .number{
-        color: ${({ theme }) => theme.basics.white};
-        font-size: 16pt;
-        margin-bottom: 10px;
-        margin-left: 10px;
-    }
     ul{
         display: flex;
+        //flex-direction: column;
         flex-wrap: wrap;
         gap: 10px;
         justify-content: center;
     }
 `
 
-export default function PokeList({ alphaFilter }){
-
-    let pokeList = getPokeList();
-
+export default function PokeList({ pokeList, letterFilter }){
     return(
         <PokeListStyled>
-            <span className='number'>
-                Pokémons encontrados: {countPokeList(pokeList.results, alphaFilter)}
-            </span>
             <ul>
                 {pokeList.results.map((poke, i) => {
-                    if(poke.name.includes(alphaFilter.toLowerCase())){
+                    if(poke.name.includes(letterFilter.toLowerCase())){
                         return(
                             <Link key={i+1} href={'/pokemon/'+poke.name}>
-                                <li>
+                                {
+                                    screen.width >= 550 ? 
                                     <PokeBox pokeName={poke.name} />
-                                </li>
+                                    :
+                                    <PokeBoxMobile pokeName={poke.name} />
+                                }
                             </Link>
                         )
                     }

@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import { getPokemon } from '../../data/getData';
-import pokeApi from '../../data/pokeApi';
 import Loading from '../globals/Loading';
 import TypeBox from './typeBox/TypeBox';
 import { firstUpperCase } from '../../scripts/utils';
 
-const PokeBoxStyled = styled.div`
+const PokeBoxStyled = styled.li`
     align-items: center;
     background-color: ${({ theme }) => theme.basics.white};
     border-radius: 5px;
@@ -35,13 +34,6 @@ const PokeBoxStyled = styled.div`
     }
     :hover{
         background-color: ${({ theme }) => theme.bgs.pokeBoxHover};
-    }
-    @media(max-width: 850px){
-        height: 150px;
-        width: 150px;
-        img{
-            width: 88px;
-        }
     }
 `
 
